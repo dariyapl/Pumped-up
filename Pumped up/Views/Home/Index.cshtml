@@ -1,0 +1,24 @@
+﻿@model List<PumpedUp.Models.ITrackable>
+
+<h2>Ваші записи</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Користувач</th>
+            <th>Опис</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.UserId</td>
+                <td>@log.GetType().Name</td>
+                <td>@log.Date.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
