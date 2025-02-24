@@ -22,7 +22,16 @@ namespace PumpedUp.Models
             Deadline = deadline;
             Date = deadline; // Додаємо значення для Date
         }
-
+        // перевантажений конструктор (без UserId) / статичний полыморфізм
+        public Goals(double targetCalories, double targetWeight)
+        {
+            Id = new Random().Next(1, 1000);
+            UserId = 0; // Гість
+            TargetCalories = targetCalories;
+            TargetWeight = targetWeight;
+            Date = DateTime.Now;
+        }
+       
 
         public void DisplayInfo()
         {

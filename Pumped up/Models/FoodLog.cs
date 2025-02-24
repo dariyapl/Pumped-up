@@ -14,7 +14,7 @@ namespace PumpedUp.Models
             Calories = calories;
         }
 
-        public override void DisplayInfo()
+        public override void DisplayInfo() // Динамічний поліморфізм (перевизначення)
         {
             Console.WriteLine($"[Харчування] {FoodName} - {Calories} калорій, Дата: {Date.ToShortDateString()}");
         }
